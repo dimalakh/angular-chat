@@ -1,0 +1,20 @@
+
+        <nav class="sidebar-nav">
+            <button id="aside-toggler" class="sidebar-toggle"></button>
+            <form>
+                <input type="text" name="searchValue" [ngModel]="searchValue" (ngModelChange)="onSearchValueChange($event)">
+                <button class="search-icon"></button>
+            </form>
+            <button id="menu-toggler" class="menu-icon"></button>
+        </nav>
+
+        <ul class="user-menu">
+            <li *ngFor="let chat of chats | async | filterByName: 'Cool chat'"  (click)="select({id: chat.id})">
+                <div class="user-photo">
+                    <div class="message-indicator">1</div>
+                </div>
+                <div class="user-name">{{chat.name}}</div>
+                <div class="short-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                <time>52 m</time>
+            </li>
+        </ul>

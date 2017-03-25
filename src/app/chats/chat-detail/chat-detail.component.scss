@@ -1,0 +1,22 @@
+@import '../../shared/scss/variables';
+
+
+/* SECTION START */
+:host {
+    display: flex;
+    max-height: 100vh;
+    width: calc(100vw - 460px);
+    flex-grow: 1;
+    flex-direction: column;
+    background-color: $absolute-white;
+
+    @media screen and (max-width: $ipad-resolution) {
+        margin-left: 110px;
+    }
+}
+
+section.toggled {
+    width: calc(100vw - 110px);
+}
+
+/* SECTION END */

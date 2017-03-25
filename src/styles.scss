@@ -1,0 +1,13 @@
+@import 'app/shared/scss/variables';
+@import 'app/shared/scss/reset';
+@import 'app/shared/scss/base';
+
+
+
+
+app-root {
+    width: 100vw;
+}
+ct-chats {
+    display: flex;
+}

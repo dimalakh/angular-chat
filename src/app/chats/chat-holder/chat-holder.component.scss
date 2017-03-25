@@ -1,0 +1,18 @@
+@import '../../shared/scss/variables';
+
+:host {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    align-items: center;
+    background: $light-primary;
+    opacity: 0.25;
+
+    h4 {
+        padding: 0 0 30px 0;
+        font-size: 1.1rem;
+        font-weight: 400;
+        letter-spacing: 1.5px;
+        color: $text-bright-white;
+    }
+}

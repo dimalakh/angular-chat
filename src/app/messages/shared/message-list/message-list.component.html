@@ -1,0 +1,44 @@
+<ul class="chat-body">
+            <li *ngFor="let message of messages | async">
+                <div class="user-photo"></div>
+                <div class="chat-message">
+                    <p>{{message.text}}</p>
+                    <time class="message-time">13:58</time>
+                </div>
+            </li>
+            <li class="is-answer">
+                <div class="user-photo"></div>
+                <div class="chat-message">
+                    <p>Lorem ipsum dolor sit amet, consectetur</p>
+                    <time class="message-time">13:58</time>
+                </div>
+            </li>
+            <li>
+                <div class="user-photo"></div>
+                <div class="chat-message">
+                    <p>Lorem ipsum dolor sit amet, consectetur</p>
+                    <time>13:58</time>
+                </div>
+            </li>
+            <li class="is-answer">
+                <div class="user-photo"></div>
+                <div class="chat-message">
+                    <p>Lorem ipsum dolor sit amet, consectetur</p>
+                    <time>13:58</time>
+                </div>
+            </li>
+            <li>
+                <div class="user-photo"></div>
+                <div class="chat-message">
+                    <p>Lorem ipsum dolor sit amet, consectetur</p>
+                    <time>13:58</time>
+                </div>
+            </li>
+            <li class="is-answer">
+                <div class="user-photo"></div>
+                <div class="chat-message">
+                    <p>Lorem ipsum dolor sit amet, consectetur</p>
+                    <time>13:58</time>
+                </div>
+            </li>
+</ul>
