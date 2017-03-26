@@ -1,0 +1,95 @@
+@import '../../../shared/scss/variables';
+
+
+
+/* USER-MENU START */
+
+.user-menu {
+    width: 100%;
+    height: calc(100vh - 85px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+    @media screen and (max-width: $ipad-resolution){
+        height: calc(100vh - 94px);
+    }
+
+    // base styles for user-menu items
+    li {
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 30px;
+        float: left;
+
+        .user-photo {
+            margin-right: 20px;
+            float: left;
+           background-image: url('/assets/user-2.jpg');
+            @include round-image(50px);        
+            
+            .message-indicator {
+                width: 18px;
+                height: 18px;
+                float: right;
+                border-radius: 50%;
+                background-color: $bright-accent;
+                border: 2px solid $bright-primary;
+                text-align: center;
+                 @include font(.65rem, 300, $text-bright-white);
+            }
+        }
+
+        // limits width of line, cuts text
+        .user-name,
+        .short-message {
+            max-width: calc(100% - 130px);
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .user-name {
+            margin: 5px;
+            @include font(0.9rem, 400, $text-bright-white);
+        }
+
+        .short-message {
+            @include font(.8rem, 300, $text-light-primary);
+        }
+
+        time {
+            position: absolute;
+            top: 47px;
+            right: 20px;
+            width: 50px;
+            padding: 3px 0;
+            text-align: center;
+            background-color: $deep-primary;
+            border-radius: 20px;
+            @include font(.7rem, 300, $text-light-primary);  
+        }
+    }
+
+    // hover styles for user-menu item
+    li:hover {
+        background-color: $light-primary;
+        
+        .message-indicator{
+            border: 2px solid $light-primary;
+        }
+    }
+
+    // styles for selected dialog
+    .is-active{
+        background-color: $light-accent;
+
+        time {
+            background-color: $absolute-white;
+            color: $text-bright-accent;
+        }
+    }
+
+}
+
+/* USER-MENU END */

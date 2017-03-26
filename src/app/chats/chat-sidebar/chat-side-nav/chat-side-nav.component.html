@@ -1,0 +1,8 @@
+<nav class="sidebar-nav">
+            <button id="aside-toggler" class="sidebar-toggle"></button>
+            <form>
+                <input type="text" (blur)="onBlur()" name="searchValue" [ngModel]="searchValue" (ngModelChange)="onSearchValueChange($event)">
+                <button class="search-icon"></button>
+            </form>
+            <button id="menu-toggler" class="menu-icon"></button>
+        </nav>
