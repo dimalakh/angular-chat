@@ -1,3 +1,5 @@
-<form>
-    <input type="text" name="searchValue" [ngModel]="searchValue">
-</form>
+<nav class="chat-nav">
+    <button id="conversation-menu" class="message-icon"></button>
+    <input type="text" name="searchValue" [ngModel]="searchValue" (ngModelChange)="onSearchValueChange($event)">
+    <button id="general-menu" class="user-icon"></button>
+</nav>

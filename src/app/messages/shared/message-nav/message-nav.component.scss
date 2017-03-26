@@ -1,0 +1,61 @@
+@import '../../../shared/scss/variables';
+
+/* CHAT NAVIGATION START */
+
+.chat-nav {
+    box-sizing: border-box;
+    padding: 30px;
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        padding: 3px;
+    }
+    
+    input {
+        margin-top: 1px;
+        padding: 4px 25px 4px 15px;
+        border-radius: $radius;
+        background: $light-grey;
+        color: $text-light-black;
+    }
+
+    //message button
+
+    .message-icon{
+        position: relative;
+    }
+
+    .message-icon:before {
+        background-image: url('/assets/sprite.svg');
+        @include icon(25px, 17px, 0, -22px);
+    }
+
+    .message-icon:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 13px;
+        width: 13px;
+        content: "1";
+        background: $bright-accent;
+        border-radius: 50%;
+        @include font(.65rem, 400, $text-bright-white);
+    }
+    
+
+    //user button
+
+    .user-icon{
+        float: right;
+    }
+
+    .user-icon:before {
+        background-image: url('/assets/sprite.svg');
+        @include icon(18px, 18px, 0, -64px);
+    }
+}
+
+/* CHAT NAVIGATION END */

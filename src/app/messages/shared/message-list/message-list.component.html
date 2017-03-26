@@ -1,9 +1,9 @@
 <ul class="chat-body">
-            <li *ngFor="let message of messages | async">
+            <li *ngFor="let message of messages | async | filterByMessage: searchValue">
                 <div class="user-photo"></div>
                 <div class="chat-message">
                     <p>{{message.text}}</p>
-                    <time class="message-time">13:58</time>
+                    <time class="message-time">{{message.sentAt | date: 'shortTime'}}</time>
                 </div>
             </li>
 </ul>

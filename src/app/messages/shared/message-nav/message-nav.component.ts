@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Form } from '@angular/forms';
+import { MessageService } from '../message.service';
 
 @Component({
     selector: 'ct-message-nav',
@@ -6,4 +8,12 @@ import { Component } from '@angular/core';
     templateUrl: './message-nav.component.html'
 })
 
-export class MessageNavComponent{}
+export class MessageNavComponent {
+    private searchValue: string = '';
+    
+    constructor(private service: MessageService) {}
+
+    onSearchValueChange(value: string) {
+        this.service.setSeachValue(value);
+    }
+}
