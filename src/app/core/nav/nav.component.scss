@@ -1,0 +1,17 @@
+@import '../../shared/scss/variables';
+
+nav {
+    padding: 10px 30px;
+    background: $light-grey;
+
+    a {
+        font-weight: 400;
+        text-decoration: none;
+        color: $text-light-black;
+        margin-left: 20px;
+    }
+
+    a:hover {
+        opacity: 0.7;
+    }
+}
