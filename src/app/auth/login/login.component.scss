@@ -1,0 +1,24 @@
+@import '/../../shared/scss/variables';
+
+form {
+    display: flex;
+    flex-direction: column;
+    background: $deep-primary;
+    color: $absolute-white;
+    padding: 20px;
+
+    h1 {
+        text-align: center;
+        margin: 0 0 25px 0;
+    }
+
+    input {
+        background: $absolute-white;
+        margin: 0 0 15px 0;
+    }
+
+    button {
+        color: $absolute-white;
+        background: $bright-accent;
+    }
+}
