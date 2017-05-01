@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { SharedModule }  from '../shared';
 import { AuthComponent } from './auth.component';
 import { LoginComponent } from './login';
@@ -17,7 +18,8 @@ import { AuthService } from './auth.service';
     SharedModule,
     AuthRoutingModule,
     HttpModule,
-    JsonpModule
+    JsonpModule,
+    FormsModule
   ],
   providers: [
     AuthService

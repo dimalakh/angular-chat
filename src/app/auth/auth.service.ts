@@ -17,6 +17,11 @@ export class AuthService {
                         .map(this.extractData);
     }
 
+    public signUp(data) {
+        return this.http.post(this.baseUrl + 'signup', data)
+                        .map(this.extractData);
+    }
+
     private extractData(res: Response) {
         let body = res.json();
         return body || { };

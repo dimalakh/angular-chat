@@ -1,13 +1,13 @@
 <div class="auth-wrapper">
-    <form class="auth-form" id="signup">
+    <form novalidate #loginForm="ngForm" class="auth-form" id="signup">
         <h1>Sign up</h1>
         <span>or <a routerLink="/auth/login">Log in</a></span> 
         <label for="auth-name">name:</label> 
-        <input id="auth-name" type="text" required /> 
+        <input ngModel name="username" id="auth-name" type="text" required /> 
         <label for="auth-email">email:</label> 
-        <input id="auth-email" type="email" /> 
+        <input  ngModel name="email" id="auth-email" type="email" required /> 
         <label for="auth-password">password:</label> 
-        <input id="auth-password" type="password" required /> 
-        <button>submit</button>   
+        <input ngModel name="password" id="auth-password" type="password" required /> 
+        <button [disabled]="!loginForm.valid">submit</button>   
     </form>
 </div>

@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Http, Response }  from '@angular/http';
+import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -8,17 +7,13 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./login.component.scss'],
 })
 
-export class LoginComponent implements OnInit {
-
+export class LoginComponent {
   constructor(private auth: AuthService) {}
 
-  handleLogIn(name, password) {
+  handleLogIn(userData) {
       event.preventDefault();
-      this.auth.logIn({'username': name, 'password': password}).subscribe( data => {
+      this.auth.logIn(userData).subscribe( data => {
         localStorage.setItem('data', JSON.stringify(data));
       });
-      console.log(1);
   }
-
-  ngOnInit() {}
 }
