@@ -1,8 +1,14 @@
 @import '/../shared/scss/variables';
 
-.auth {
+.auth-wrapper {
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    flex: 1;
     justify-content: center;
     align-items: center;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, $deep-primary, $bright-accent);
 }

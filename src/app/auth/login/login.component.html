@@ -1,8 +1,11 @@
-<form>
-    <h1>Log in</h1>
-    <label for="">name:</label>
-    <input id="name" />
-    <label for="pass">password:</label>
-    <input id="pass" />
-    <button>Log in</button>
-</form>
+<div class="auth-wrapper">
+    <form class="auth-form" id="login">
+        <h1>Log in</h1>
+        <span>or <a routerLink="/auth/register" >Sign up</a></span> 
+        <label for="login-name">name:</label> 
+        <input id="login-name" type="text" required /> 
+        <label for="login-password">password:</label> 
+        <input id="login-password" type="password" required /> 
+        <button>submit</button>   
+    </form>
+</div>

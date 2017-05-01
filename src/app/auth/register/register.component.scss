@@ -1,0 +1,62 @@
+@import '/../../shared/scss/variables';
+
+.auth-form {
+        color: $absolute-white;
+        display: flex;
+        flex-direction: column;
+        transition: .3s;
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        span {
+            font-size: .8rem;
+            text-align: center;
+            margin-bottom: 15px;
+
+            a {
+                font-size: .9rem;
+                color: $absolute-white;
+                text-decoration: none;
+            }
+        }
+
+        label {
+            font-size: .9rem;
+            margin:  0 10px 3px 10px;
+        }
+
+        input {
+            border-radius: $radius;
+            padding: 6px 10px;
+            margin-bottom: 15px;
+            background: rgba(255, 255, 255, 0.18);
+            transition: .1s;
+        }
+
+        .error {
+            background: $error;
+        }
+
+        button {
+            color: $absolute-white;
+            padding: 3px 0;
+            border: 2px solid rgba(255, 255, 255, 0.18);
+            font-size: 1rem;
+            border-radius: $radius;
+            margin: 0 50px;
+            transition: .3s;
+        }
+
+        button:hover {
+            opacity: 1;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+    }
+
+    .auth-form.hidden {
+        display: none;
+    }
