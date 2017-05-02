@@ -11,9 +11,9 @@ export class LoginComponent {
   constructor(private auth: AuthService) {}
 
   handleLogIn(userData) {
-      event.preventDefault();
-      this.auth.logIn(userData).subscribe( data => {
-        localStorage.setItem('data', JSON.stringify(data));
-      });
+    event.preventDefault();
+    this.auth.logIn(userData).subscribe( data => {
+      localStorage.setItem('data', JSON.stringify(data));
+    });
   }
 }

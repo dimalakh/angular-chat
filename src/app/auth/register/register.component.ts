@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../auth.service';
 
 
 @Component({
@@ -8,7 +9,10 @@ import { Component } from '@angular/core';
 })
 
 export class RegisterComponent  {
+  constructor(private auth: AuthService) {}
 
-  constructor() {}
+  handleSignUp(userData) {
+    this.auth.signUp(userData);
+  }
 
 }

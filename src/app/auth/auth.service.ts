@@ -18,8 +18,7 @@ export class AuthService {
     }
 
     public signUp(data) {
-        return this.http.post(this.baseUrl + 'signup', data)
-                        .map(this.extractData);
+        return this.http.post(this.baseUrl + 'signup', data).subscribe();
     }
 
     private extractData(res: Response) {
