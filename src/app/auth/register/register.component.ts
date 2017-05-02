@@ -16,5 +16,5 @@ export class RegisterComponent  {
     this.auth.signUp(userData);
     this.router.navigate(['/auth/login']);
   }
-
 }
+ 
