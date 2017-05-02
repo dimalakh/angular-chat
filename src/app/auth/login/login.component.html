@@ -3,9 +3,15 @@
         <h1>Log in</h1>
         <span>or <a routerLink="/auth/register" >Sign up</a></span> 
         <label for="login-name">name:</label> 
-        <input ngModel name="username" id="login-name" type="text" required /> 
+        <input ngModel name="username" id="login-name" type="text"  minlength="3" required #username="ngModel" /> 
+        <div class="error" *ngIf="username.errors && username.touched">
+            Minimum length is 3
+        </div> 
         <label for="login-password">password:</label> 
-        <input ngModel name="password" id="login-password" type="password" required /> 
+        <input ngModel name="password" id="login-password" type="password" minlength="5" required #password="ngModel" /> 
+        <div class="error" *ngIf="password.errors && password.touched">
+            Minimum length is 5
+        </div>
         <button [disabled]="!loginForm.valid" (click)="handleLogIn(loginForm.value)">submit</button>
     </form>   
 </div>

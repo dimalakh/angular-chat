@@ -3,11 +3,18 @@
         <h1>Sign up</h1>
         <span>or <a routerLink="/auth/login">Log in</a></span> 
         <label for="auth-name">name:</label> 
-        <input ngModel name="username" id="auth-name" type="text" required /> 
+        <input ngModel name="username" id="auth-name" type="text" minlength="3" required #username="ngModel" /> 
+        <div class="error" *ngIf="username.errors && username.touched">
+            Minimum length is 3
+        </div> 
         <label for="auth-email">email:</label> 
-        <input  ngModel name="email" id="auth-email" type="email" required /> 
+        <input  ngModel name="email"  id="auth-email" type="email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" #email="ngModel" /> 
+        <div class="error" *ngIf="email.errors && email.touched">invalid email</div>
         <label for="auth-password">password:</label> 
-        <input ngModel name="password" id="auth-password" type="password" required /> 
-        <button [disabled]="!loginForm.valid">submit</button>   
+        <input ngModel name="password" id="auth-password" type="password"  minlength="5" required #password="ngModel"/> 
+        <div class="error" *ngIf="password.errors && password.touched">
+            Minimum length is 5
+        </div>
+        <button [disabled]="!loginForm.valid">submit</button>
     </form>
 </div>
