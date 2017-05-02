@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { PageNotFoundComponent }   from './not-found.component';
+import { AuthGuard } from './shared/auth.guard';
+import { ContentGuard } from './shared/content.guard';
 
 const appRoutes: Routes = [
   {
@@ -15,10 +17,12 @@ const appRoutes: Routes = [
   },
   {
     path: 'chat',
+    canActivate: [ContentGuard],
     loadChildren: 'app/chats/chats.module#ChatsModule'
   },
   {
     path: 'auth',
+    canActivate: [AuthGuard],
     loadChildren: 'app/auth/auth.module#AuthModule'
   },
   {
